@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.geolocator"
+    namespace = "com.example.geolocatorwithai"
     compileSdk = 35
     ndkVersion = "27.0.12077973"
 
