@@ -6,9 +6,9 @@ plugins {
 }
 
 android {
-    namespace = "com.example.geolocatorwithai"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    namespace = "com.example.geolocator"
+    compileSdk = 35
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
