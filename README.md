@@ -52,3 +52,9 @@ void initState() {
 
 ℹ️ ملاحظات
 يمكنك أيضًا استخدام الدالتين _handleLocationPermission و _getCurrentLocation المتوفرتين في ملف main.dart.
+
+
+
+
+اذا واجهت اخطاء تأكد من توافق الاصدارات ويمكنك حذف كل شيئ والبدء من جديد  :)
+
