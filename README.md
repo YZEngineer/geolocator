@@ -1,16 +1,60 @@
-# geolocatorwithai
+📍 geolocator
+هذه الوثيقة تشرح كيفية إعداد واستخدام حزمة geolocator في تطبيق Flutter لتحديد الموقع الجغرافي للمستخدم.
+[url](https://pub.dev/packages/geolocator)
+✅ خطوات الاستخدام
+1. استيراد الحزمة
+import 'package:geolocator/geolocator.dart';
+<br><>
+3. إضافة الحزمة إلى المشروع
+flutter pub add geolocator
 
-A new Flutter project.
 
-## Getting Started
+5. إعداد ملف android/app/build.gradle
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+android {
+    namespace = "com.example.geolocator"
+    compileSdk = 35
+    ndkVersion = "27.0.12077973"
+}
+6. إضافة الأذونات في ملف AndroidManifest.xml
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+7. التحقق من تفعيل خدمات الموقع
+
+
+
+
+Future<void> myFunction() async {
+  bool serviceEnabled;
+  serviceEnabled = await Geolocator.isLocationServiceEnabled();
+  print(serviceEnabled);
+}
+
+
+
+8. استدعاء الدالة في initState
+
+
+@override
+void initState() {
+  super.initState();
+  myFunction();
+}
+
+
+ℹ️ ملاحظات
+يمكنك أيضًا استخدام الدالتين _handleLocationPermission و _getCurrentLocation المتوفرتين في ملف main.dart.
+
+
+
+
+اذا واجهت اخطاء تأكد من توافق الاصدارات ويمكنك حذف كل شيئ والبدء من جديد  :)
+
